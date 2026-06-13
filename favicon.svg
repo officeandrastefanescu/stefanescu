@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Black rounded background -->
+  <rect width="32" height="32" rx="6" fill="#1a1a1a"/>
+  <!-- Letter A as filled path (no fonts needed) -->
+  <path d="M 16,5 L 28,27 L 23,27 L 20.5,21 L 11.5,21 L 9,27 L 4,27 Z M 13.5,17 L 18.5,17 L 16,11 Z" fill="#f56121"/>
+</svg>
