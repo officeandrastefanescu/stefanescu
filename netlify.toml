@@ -1,0 +1,8 @@
+plugins = []
+headers = []
+
+[[redirects]]
+  from = "https://andrastefanescu.com/*"
+  to = "https://andrahartlieb.com/:splat"
+  status = 301
+  force = true

@@ -1192,6 +1192,60 @@
     footer a { color: var(--orange); text-decoration: none; }
     footer a:hover { color: var(--white); }
 
+    .imprint-page {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(26,26,26,0.98);
+      color: var(--white);
+      overflow-y: auto;
+      padding: 48px 24px;
+      display: none;
+      font-family: Georgia, serif;
+    }
+    .imprint-page.active { display: block; }
+    .imprint-panel {
+      max-width: 820px;
+      margin: 0 auto;
+      background: rgba(10,10,10,0.98);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 42px 38px;
+      border-radius: 24px;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+    }
+    .imprint-panel h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 28px;
+      letter-spacing: -0.5px;
+    }
+    .imprint-panel h5 {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      margin-top: 24px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .imprint-panel p {
+      color: rgba(255,255,255,0.82);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+    .imprint-close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.6);
+      border-radius: 100px;
+      padding: 12px 28px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 28px;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -2003,8 +2057,113 @@
     <p data-orig-outline="" class="" style="">
       © 2026 Andra Hartlieb &nbsp;|&nbsp;
       <a href="mailto:andra@andrahartlieb.com">andra@andrahartlieb.com</a>
-      &nbsp;|&nbsp; Flying the Plane While Building It</p>
+      &nbsp;|&nbsp; Flying the Plane While Building It&nbsp;|&nbsp;
+      <a id="open-imprint" href="#" style="color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px;">Imprint</a>
+      &nbsp;|&nbsp;
+      <a id="open-privacy" href="#" style="color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px;">Privacy Policy</a>
+    </p>
   </footer>
+
+  <div id="imprint-page" class="imprint-page" aria-hidden="true">
+    <div class="imprint-panel">
+      <h1>Imprint</h1>
+      <h5>Media owner, publisher and responsible for the content:</h5>
+      <p>Andra Stefanescu</p>
+
+      <h5>Address</h5>
+      <p>Wien, Austria</p>
+
+      <h5>Owner</h5>
+      <p>Andra Stefanescu</p>
+
+      <h5>E-mail</h5>
+      <p>andra@andrahartlieb.com</p>
+
+      <h5>Business purpose</h5>
+      <p>Training and Coaching</p>
+
+      <h5>Editorial policy</h5>
+      <p>Information about workshops, facilitation, trainings, events in related fields.</p>
+
+      <h5>Supervisory Authority / Trade Authority</h5>
+      <p>District authority Vienna</p>
+
+      <h5>Copyright</h5>
+      <p>All contents of this website (pictures, photos, texts, videos, etc.) are subject to copyright and are owned by andrahartlieb.com</p>
+
+      <h5>Liability for Links on This Website</h5>
+      <p>Our website contains links to other websites whose content we are not responsible for. If you notice unlawful links on our website, please contact us.</p>
+
+      <button type="button" class="imprint-close">Close</button>
+    </div>
+  </div>
+
+  <div id="privacy-page" class="imprint-page" aria-hidden="true">
+    <div class="imprint-panel">
+      <h1>Privacy Policy</h1>
+      <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+      <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+
+      <h5>Interpretation and Definitions</h5>
+      <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. These definitions shall have the same meaning regardless of whether they appear in singular or plural.</p>
+
+      <h5>Definitions</h5>
+      <ul>
+        <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+        <li><strong>Company</strong> refers to Andra Hartlieb.</li>
+        <li><strong>Cookies</strong> are small files placed on Your device by a website.</li>
+        <li><strong>Country</strong> refers to: Austria.</li>
+        <li><strong>Device</strong> means any device that can access the Service.</li>
+        <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+        <li><strong>Service</strong> refers to the Website.</li>
+        <li><strong>Service Provider</strong> means any person or company processing data on behalf of the Company.</li>
+        <li><strong>Usage Data</strong> refers to data collected automatically from the use of the Service.</li>
+        <li><strong>Website</strong> refers to andrahartlieb.com.</li>
+        <li><strong>You</strong> means the individual using the Service or the legal entity on whose behalf they use it.</li>
+      </ul>
+
+      <h5>Collecting and Using Your Personal Data</h5>
+      <h6>Types of Data Collected</h6>
+      <h5>Personal Data</h5>
+      <p>While using Our Service, We may ask You to provide personally identifiable information that can be used to contact or identify You, including email address, first name and last name, and Usage Data.</p>
+
+      <h5>Usage Data</h5>
+      <p>Usage Data is collected automatically and may include Your Device's IP address, browser type and version, pages visited, time and date of your visit, and other diagnostic data.</p>
+
+      <h5>Tracking Technologies and Cookies</h5>
+      <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. These may include cookies, Flash Cookies, and web beacons.</p>
+      <p>Cookies can be session or persistent. Session Cookies are deleted when You close your browser. Persistent Cookies remain on Your device until deleted.</p>
+
+      <h5>Use of Your Personal Data</h5>
+      <p>We may use Personal Data to provide and maintain the Service, manage accounts, perform contracts, contact You, provide news and offers, manage requests, evaluate business transfers, and improve our Service.</p>
+
+      <h5>Disclosure of Your Personal Data</h5>
+      <p>We may share Your personal information with Service Providers, affiliates, business partners, other users when you choose to share, and with Your consent.</p>
+
+      <h5>Retention of Your Personal Data</h5>
+      <p>We retain Your Personal Data only as long as necessary for the purposes described, to comply with legal obligations, resolve disputes, and enforce agreements.</p>
+
+      <h5>Transfer of Your Personal Data</h5>
+      <p>Your data may be transferred to locations outside Your jurisdiction. We take steps to protect Your information when transferring it.</p>
+
+      <h5>Disclosure of Your Personal Data</h5>
+      <p>Your data may be disclosed during business transactions, to law enforcement, or to satisfy other legal requirements.</p>
+
+      <h5>Security of Your Personal Data</h5>
+      <p>We strive to protect Your Personal Data with commercially acceptable means, but no method of transmission or storage is 100% secure.</p>
+
+      <h5>Links to Other Websites</h5>
+      <p>Our Service may contain links to third party websites. We are not responsible for their content, privacy policies, or practices.</p>
+
+      <h5>Changes to this Privacy Policy</h5>
+      <p>We may update this Privacy Policy from time to time and will notify You by posting the updated policy on this page.</p>
+
+      <h5>Contact Us</h5>
+      <p>If you have any questions about this Privacy Policy, contact us at <a href="mailto:andra@andrahartlieb.com" style="color: #ffffff; text-decoration: underline;">andra@andrahartlieb.com</a>.</p>
+
+      <button type="button" class="privacy-close">Close</button>
+    </div>
+  </div>
 
 
   <!-- COOKIE BANNER -->
@@ -2080,6 +2239,33 @@
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+
+    const imprintPage = document.getElementById('imprint-page');
+    const imprintOpen = document.getElementById('open-imprint');
+    const imprintClose = document.querySelector('.imprint-close');
+    const privacyPage = document.getElementById('privacy-page');
+    const privacyOpen = document.getElementById('open-privacy');
+    const privacyClose = document.querySelector('.privacy-close');
+
+    function showOverlay(page, e) {
+      e && e.preventDefault();
+      if (!page) return;
+      page.classList.add('active');
+      page.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideOverlay(page) {
+      if (!page) return;
+      page.classList.remove('active');
+      page.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    imprintOpen && imprintOpen.addEventListener('click', e => showOverlay(imprintPage, e));
+    imprintClose && imprintClose.addEventListener('click', () => hideOverlay(imprintPage));
+    privacyOpen && privacyOpen.addEventListener('click', e => showOverlay(privacyPage, e));
+    privacyClose && privacyClose.addEventListener('click', () => hideOverlay(privacyPage));
 
     // ── ✏️ EDIT MODE (localhost only) ──
     if (window.location.hostname === 'localhost') {
